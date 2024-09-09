@@ -1,7 +1,6 @@
 from django.shortcuts import render
 from django.http import Http404
 from . import util
-from django.urls import get_resolver
 
 def index(request):
     return render(request, "encyclopedia/index.html")
@@ -22,12 +21,3 @@ def entry_page(request, title):
         "content": entry
     })
     
-    def show_urls(request):
-        url_patterns = get_resolver().url_patterns
-        url_list[]
-        for pattern in url_patterns:
-            url_list.append(str(pattern))
-            return Http404("<br>".join(url_list))
-    
-
-
